@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='base.css') }}" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+<body>
+    {% for todo in todos %}
+    <article class="card">
+        <h2>{{ todo.title }}</h2>
+        <hr>
+        <p>{{ todo.description }}</p>
+        <hr>
+        <p>Status: {{ todo.status }}</p>
+        <a href="{{ url_for('edit_todo',todo_id=todo.todo_id)}}">
+            <button class="btn btn-primary" >Edit</button>
+        </a>
+        <a href="{{ url_for('mark_done',todo_id=todo.todo_id)}}">
+            <button class="btn btn-success">Mark as Done</button>
+        </a>
+        <a href="{{ url_for('delete_todo',todo_id=todo.todo_id)}}">
+            <button class="btn btn-danger">Delete</button>
+        </a>
+    </article>
+    {% endfor %}
+</body>
+</html>

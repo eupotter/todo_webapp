@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card{
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3)
+}
+
+.btn-success{
+    color: white;
+    background-color: rgb(37, 198, 37);
+}
+
+.btn-danger{
+    color: white;
+    background-color: rgb(207, 69, 69);
+}
+
+.btn-primary{
+    color:white;
+    background-color: rgb(80, 80, 213);
+}

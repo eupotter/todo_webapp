@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='base.css') }}" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   <form action="{{ url_for('create_todo') }}" method="post">
+    <label for="title">Title: </label>
+    <input id="title" type="text" name="title"  required placeholder="Enter todo title">
+    <br>
+    <label for="description">Description of todo: </label>
+    <textarea id="description" type="text" name="description"  required placeholder="Enter description" cols="50" rows="5"></textarea>
+    <input type="submit" value="submit" class="btn btn-primary">
+   </form>
+</body>
+</html>
