@@ -7,6 +7,11 @@
     <title>Todo List</title>
 </head>
 <body>
+    <div class="topnav">
+        <a href="{{ url_for('home')}}">Home</a>
+        <a class="active" href="{{ url_for('todos_list')}}">View Todos</a>
+        <a href="{{ url_for('create_todo')}}">Add Todo</a>
+    </div>
     {% for todo in todos %}
     <article class="card">
         <h2>{{ todo.title }}</h2>

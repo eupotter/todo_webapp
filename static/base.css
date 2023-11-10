@@ -11,6 +11,7 @@
     margin: 1em;
 }
 
+/* style the button*/
 .btn{
     border: none;
     border-radius: 5px;
@@ -19,21 +20,61 @@
     cursor: pointer;
 }
 
+/* style the button on hover adding a shadow*/
 .btn:hover{
-    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
 }
 
+/* style the button with green bg color*/
 .btn-success{
     color: white;
     background-color: rgb(37, 198, 37);
 }
 
+/* style the button with red bg color*/
 .btn-danger{
     color: white;
     background-color: rgb(207, 69, 69);
 }
 
+/* style the button with blue bg color*/
 .btn-primary{
     color:white;
     background-color: rgb(80, 80, 213);
 }
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+ 
+  
+  

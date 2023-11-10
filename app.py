@@ -37,10 +37,12 @@ def delete_todo(todo_id):
 @app.route("/edit_todo/<int:todo_id>", methods=["GET","POST"])
 def edit_todo(todo_id):
     todos_list = ToDoList()
+    todo = todos_list.get_todo_by_id(todo_id)
     if request.method == "GET":
-        todo = todos_list.get_todo_by_id(todo_id)
         return render_template("edit_todo.html", todo=todo)
-    
+    todo_data = request.form
+    todos_list.update_todo(todo_id, newtitle=todo_data["title"], newdescription=todo_data["description"], newstatus=todo_data["status"])
+    return redirect(url_for("todos_list"))
 
 if __name__ == "__main__":
     app.run()
