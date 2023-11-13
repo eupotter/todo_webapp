@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from models.todo_list import ToDoList
+from .db import db
+
 
 app = Flask(__name__)
 
@@ -43,6 +45,8 @@ def edit_todo(todo_id):
     todo_data = request.form
     todos_list.update_todo(todo_id, newtitle=todo_data["title"], newdescription=todo_data["description"], newstatus=todo_data["status"])
     return redirect(url_for("todos_list"))
+
+db.init_app(app)
 
 if __name__ == "__main__":
     app.run()
